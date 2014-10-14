@@ -29,7 +29,7 @@ end
 
 post '/foods' do
 	@food = Food.create(params[:food])
-	redirect '/foods'
+	redirect "/foods"
 end
 
 get '/foods/:id/edit' do
@@ -40,7 +40,7 @@ end
 patch '/foods/:id' do
 	food = Food.find(params[:id])
 	food.update(params[:food])
-	redirect '/foods/#{food.id}'
+	redirect "/foods/#{food.id}"
 end
 
 get '/foods/:id' do
@@ -51,7 +51,7 @@ end
 
 delete '/foods/:id' do
 	food = Food.destroy(params[:id])
-	redirect '/foods'
+	redirect "/foods"
 end
 
 ### PARTY CRUD ###

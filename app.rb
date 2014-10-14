@@ -54,28 +54,43 @@ delete '/foods/:id' do
 	redirect "/foods"
 end
 
-### PARTY CRUD ###
+## PARTY CRUD ###
 
-# get '/parties' do
-# end
+get '/parties' do
+	@parties = Party.all
+	erb :'party/index'
+end
 
-# get '/parties/new' do
-# end
+get '/parties/new' do
+	erb :'party/new'
+end
 
-# post '/parties' do
-# end
+post '/parties' do
+	@party = Party.create(params[:party])
+	redirect "/parties"
+end
 
-# get '/parties/:id/edit' do
-# end
+get '/parties/:id/edit' do
+	@party = Party.find(params[:id])
+	erb :'party/edit'
+end
 
-# patch '/parties/:id' do
-# end
+patch '/foods/:id' do
+	party = Party.find(params[:id])
+	party.update(params[:party])
+	redirect "/parties/#{party.id}"
+end
 
-# get '/parties/:id' do
-# end
+get '/parties/:id' do
+	@party = Party.find(params[:id])
+	erb :'party/show'
 
-# delete '/parties/:id' do
-# end
+end
+
+delete '/parties/:id' do
+	party = Party.destroy(params[:id])
+	redirect "/parties"
+end
 
 # ### OTHER ###
 # post '/orders' do

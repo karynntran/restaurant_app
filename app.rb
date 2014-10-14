@@ -7,7 +7,7 @@ require_relative 'models/party.rb'
 
 ActiveRecord::Base.establish_connection({
 	adapter: 'postgresql',
-	database: 'food_db'
+	database: 'restaurant_db'
 })
 
 ### LANDING PAGE ###

@@ -13,7 +13,7 @@ ActiveRecord::Base.establish_connection({
 ### LANDING PAGE ###
 
 get '/' do
-
+	erb :index
 end
 
 ### FOOD CRUD ###
@@ -84,7 +84,6 @@ end
 get '/parties/:id' do
 	@party = Party.find(params[:id])
 	erb :'party/show'
-
 end
 
 delete '/parties/:id' do

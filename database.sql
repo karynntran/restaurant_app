@@ -1,4 +1,4 @@
-CREATE DATABASE food_db;
+CREATE DATABASE restaurant_app;
 
 \c food_db;
 
@@ -10,15 +10,16 @@ CREATE TABLE foods (
   allergens VARCHAR(255)
 );
 
-
-CREATE DATABASE party_db;
-
-\c party_db;
-
 CREATE TABLE parties (
   id SERIAL PRIMARY KEY,
-  table_num INTEGER,
+  party_name VARCHAR(100),
   guest_num INTEGER,
   paid VARCHAR(100)
+);
+
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  parties_id INTEGER,
+  foods_id INTEGER
 );
 

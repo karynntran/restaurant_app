@@ -4,6 +4,7 @@ require 'active_support'
 
 require_relative 'models/food.rb'
 require_relative 'models/party.rb'
+require_relative 'models/order.rb'
 
 ActiveRecord::Base.establish_connection({
 	adapter: 'postgresql',
@@ -54,7 +55,7 @@ delete '/foods/:id' do
 	redirect "/foods"
 end
 
-## PARTY CRUD ###
+### PARTY CRUD ###
 
 get '/parties' do
 	@parties = Party.all
@@ -91,23 +92,36 @@ delete '/parties/:id' do
 	redirect "/parties"
 end
 
-# ### OTHER ###
-# post '/orders' do
-# 	#Creates a new order
-# end
+### ORDER ###
+get '/orders' do
+	erb :'orders/index'
+end
 
-# patch '/orders/:id' do
-# 	#Change item to no-charge
-# end
+get '/orders/new' do
+	@foods = Food.all
+	@parties = Party.all
+	erb :'orders/new'
+end
 
-# delete '/orders' do
-# 	#Removes an order
-# end
+post '/orders' do
+	@foods = Food.all
+	@parties = Party.all
+	order = Order.create(params[:order])
+	redirect "/parties/#{party.id}"
+end
 
-# get '/parties/:id/receipt' do
-# 	#Saves the party's receipt data to a file. Displays the content of the receipt. Offer the file for download.
-# end
+patch '/orders/:id' do
+	#Change item to no-charge
+end
 
-# patch '/parties/:id/checkout' do
-# 	#marks the party as paid
-# end
+delete '/orders' do
+	#Removes an order
+end
+
+get '/parties/:id/receipt' do
+	#Saves the party's receipt data to a file. Displays the content of the receipt. Offer the file for download.
+end
+
+patch '/parties/:id/checkout' do
+	#marks the party as paid
+end

@@ -3,7 +3,9 @@
 <ul>
 <% @foods.each do |food| %>
 	<li>
-	<%= <a href="/foods/<%=food.id%>"><%=food.name%></a> %>
+	<a href="/foods/<%=food.id%>"><%=food.name%></a>
 	</li>
 <% end %>
 </ul>
+
+<a href = "/foods/new">Add new food item</a>

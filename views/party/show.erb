@@ -1,0 +1,11 @@
+<h1><%=@party.party_name%></h1>
+
+<p>Table Number: <%=@party.table_num%></p>
+<p>Number of Guests: <%=@party.guest_num%></p>
+<p>Paid?: <%=@party.paid%></p>
+
+<a href="/parties/<%=@party.id%>/edit">Edit</a> or 
+<form action = '/parties/<%=@party.id%>' name="method" method="post">
+	<input type ="hidden" name="_method" value="delete"/>
+	<input type ="submit" value="Delete party"/>
+</form>

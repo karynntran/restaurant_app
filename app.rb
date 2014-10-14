@@ -75,7 +75,7 @@ get '/parties/:id/edit' do
 	erb :'party/edit'
 end
 
-patch '/foods/:id' do
+patch '/parties/:id' do
 	party = Party.find(params[:id])
 	party.update(params[:party])
 	redirect "/parties/#{party.id}"

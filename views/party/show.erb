@@ -22,11 +22,13 @@
 		<td><%=order.food_price%></td>
 		<td>
 			<form action = '/orders' name="method" method="post">
-			<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
-			<input type ="hidden" name="_method" value="delete"/>
-			<input class = "delete" type ="submit" value="Delete order"/>
+				<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
+				<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>
+				<input type ="hidden" name="_method" value="delete"/>
+				<input class = "delete" type ="submit" value="Delete order"/>
 			</form>
 		</td>
+
 	</tr>
 <% end %>
 <table>

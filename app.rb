@@ -129,13 +129,21 @@ delete '/orders' do
 	redirect "/parties/#{party.id}"
 end
 
-get '/parties/:id/receipt' do
-	@party = Party.find(params[:id])
-	erb :'party/receipt'
+# get '/parties/:id/receipt' do
+# 	# @party = Party.find(params[:id])
 
-	#Saves the party's receipt data to a file. Displays the content of the receipt. Offer the file for download.
-end
+# 	# file = File.open('receipt.txt', 'w')
 
-patch '/parties/:id/checkout' do
-	#marks the party as paid
-end
+# 	# @orders = Order.where(party_id: params[:id])
+# 	# @orders.each do |order|
+# 	# 	file.write([order.food.name, order.food.price])
+# 	# end
+# 	# file.close
+# 	# erb :'party/receipt'
+
+# 	#Saves the party's receipt data to a file. Displays the content of the receipt. Offer the file for download.
+# end
+
+# patch '/parties/:id/checkout' do
+# 	#marks the party as paid
+# end

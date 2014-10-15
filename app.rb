@@ -117,9 +117,11 @@ post '/parties/:id/orders' do
 	redirect "/parties/#{@party.id}"
 end
 
-patch '/orders/:id' do
-	#Change item to no-charge
-end
+# patch '/orders/:id' do
+# 	# @order = Order.find(params[:id])
+# 	# @order.update(params[:order])
+# 	redirect "/parties/#{party.id}"
+# end
 
 delete '/orders' do
 	party = Party.find(params[:party][:id])
@@ -128,6 +130,9 @@ delete '/orders' do
 end
 
 get '/parties/:id/receipt' do
+	@party = Party.find(params[:id])
+	erb :'party/receipt'
+
 	#Saves the party's receipt data to a file. Displays the content of the receipt. Offer the file for download.
 end
 

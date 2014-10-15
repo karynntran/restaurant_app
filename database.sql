@@ -19,7 +19,7 @@ CREATE TABLE parties (
 
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY,
-  parties_id INTEGER,
-  foods_id INTEGER
+  party_id INTEGER,
+  food_id INTEGER
 );
 

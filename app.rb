@@ -84,6 +84,7 @@ end
 
 get '/parties/:id' do
 	@party = Party.find(params[:id])
+	@orders = Order.find(order.party_id)
 	erb :'party/show'
 end
 
@@ -92,22 +93,22 @@ delete '/parties/:id' do
 	redirect "/parties"
 end
 
-### ORDER ###
-get '/orders' do
+### ORDER FROM PARTIES###
+get '/parties/:id/orders' do
 	erb :'orders/index'
 end
 
-get '/orders/new' do
+get '/parties/:id/orders/new' do
 	@foods = Food.all
 	@parties = Party.all
+	@party = Party.find(params[:id])
 	erb :'orders/new'
 end
 
-post '/orders' do
-	@foods = Food.all
-	@parties = Party.all
+post '/parties/:id/orders' do
+	@party = Party.find(params[:id])
 	order = Order.create(params[:order])
-	redirect "/parties/#{party.id}"
+	redirect "/parties/#{@party.id}"
 end
 
 patch '/orders/:id' do

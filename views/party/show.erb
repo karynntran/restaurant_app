@@ -8,3 +8,15 @@
 	<input type ="hidden" name="_method" value="delete"/>
 	<input type ="submit" value="Delete party"/>
 </form>
+
+<a href = "/parties/<%=@party.id%>/orders/new">Add an order</a>
+
+<h2>All Outstanding Orders</h2>
+
+<ul>
+<% @orders.each do |order| %>
+	<li>
+	<%=order.food_id%></a>
+	</li>
+<% end %>
+</ul>

@@ -6,8 +6,7 @@ class Order < ActiveRecord::Base
 	belongs_to(:party)
   	belongs_to(:food)
 	
-	
-	def to_s
+	def food_name
 	    self.food.name
 	end
 

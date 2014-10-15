@@ -1,12 +1,10 @@
-<h1><%=@party.party_name%></h1>
+<h1>Party Name: <%=@party.party_name%></h1>
 
 <p>Number of Guests: <%=@party.guest_num%></p>
-<p>Paid?: <%=@party.paid%></p>
 
-<a href="/parties/<%=@party.id%>/edit">Edit</a> or 
-<form action = '/parties/<%=@party.id%>' name="method" method="post">
+<a href="/parties/<%=@party.id%>/edit">Edit</a> or<form action = '/parties/<%=@party.id%>' name="method" method="post">
 	<input type ="hidden" name="_method" value="delete"/>
-	<input type ="submit" value="Delete party"/>
+	<input class = "delete" type ="submit" value="Delete party"/>
 </form>
 
 <a href = "/parties/<%=@party.id%>/orders/new">Add an order</a>
@@ -16,7 +14,7 @@
 <ul>
 <% @orders.each do |order| %>
 	<li>
-	<%=order.food.name%>
+	<%=order.food_name%>
 	</li>
 <% end %>
 </ul>

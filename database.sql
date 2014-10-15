@@ -1,6 +1,6 @@
 CREATE DATABASE restaurant_app;
 
-\c food_db;
+\c restaurant_db;
 
 CREATE TABLE foods (
   id SERIAL PRIMARY KEY,
@@ -13,8 +13,7 @@ CREATE TABLE foods (
 CREATE TABLE parties (
   id SERIAL PRIMARY KEY,
   party_name VARCHAR(100),
-  guest_num INTEGER,
-  paid VARCHAR(100)
+  guest_num INTEGER
 );
 
 CREATE TABLE orders (

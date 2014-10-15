@@ -1,6 +1,6 @@
 <h1>Select Items for Order</h1>
 
-<form action ="/parties/<%=@party.id%>/orders" name="method" method="post">
+<form action ="/parties/<%= @party.id %>/orders" name="method" method="post">
 	<%@foods.each do |food|%>
 	<input type="checkbox" name="order[food_id]" value="<%=food.id%>"/><%=food.name%><br>
 	<%end%>

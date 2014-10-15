@@ -24,3 +24,10 @@ h1 {
 a {
 	color: orangered;
 }
+
+.errors {
+	font-size: 15px;
+	color: red;
+	font-family: 'Voltaire', sans-serif;
+	color: orangered;
+}

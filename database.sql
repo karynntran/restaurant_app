@@ -7,7 +7,6 @@ CREATE TABLE foods (
   name VARCHAR(100),
   cuisine VARCHAR(100),
   price INTEGER,
-  allergens VARCHAR(255)
 );
 
 CREATE TABLE parties (

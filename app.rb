@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.require
 require 'active_support'
+require 'pry'
 
 require_relative 'models/food.rb'
 require_relative 'models/party.rb'
@@ -30,7 +31,13 @@ end
 
 post '/foods' do
 	@food = Food.create(params[:food])
-	redirect "/foods"
+
+	if @food.valid?
+		redirect '/foods'
+	else
+	    @errors = @food.errors.full_messages
+	    erb :'food/new'
+	end
 end
 
 get '/foods/:id/edit' do
@@ -100,7 +107,6 @@ end
 
 get '/parties/:id/orders/new' do
 	@foods = Food.all
-	@parties = Party.all
 	@party = Party.find(params[:id])
 	erb :'orders/new'
 end
@@ -116,7 +122,8 @@ patch '/orders/:id' do
 end
 
 delete '/orders' do
-	#Removes an order
+	order = Order.destroy(params[:id])
+	redirect "/parties/#{@party.id}"
 end
 
 get '/parties/:id/receipt' do

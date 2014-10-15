@@ -11,14 +11,18 @@
 
 <h2>All Outstanding Orders</h2>
 
-<ul>
+<table>
 <% @orders.each do |order| %>
-	<li>
-	<%=order.food_name%>
-	</li>
+	<tr>
+	<td><%=order.food_name%></td>
+	<td><form action = '/orders' name="method" method="post">
+		<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
+		<input type ="hidden" name="_method" value="delete"/>
+		<input class = "delete" type ="submit" value="Delete order"/>
+	</form></td>
+	</tr>
 <% end %>
+<table>
 
-<form action = '/parties/<%=@party.id%>/orders' name="method" method="post">
-	<input type ="hidden" name="_method" value="delete"/>
-	<input class = "delete" type ="submit" value="Delete party"/>
-</ul>
+
+

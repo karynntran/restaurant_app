@@ -11,15 +11,6 @@ h1 {
 	font-family: 'Bad Script', cursive;
 }
 
-.delete {
-	background-color: darkgray;
-	border: none;
-	text-decoration: underline;
-	color: purple;
-	font-size: 20px;
-	font-family: 'Voltaire', sans-serif;
-	display: inline-block;
-}
 
 a {
 	color: orangered;
@@ -30,4 +21,16 @@ a {
 	color: red;
 	font-family: 'Voltaire', sans-serif;
 	color: orangered;
+}
+
+/*buttons*/
+
+.delete {
+	background-color: darkgray;
+	border: none;
+	text-decoration: underline;
+	color: purple;
+	font-size: 20px;
+	font-family: 'Voltaire', sans-serif;
+	display: inline-block;
 }

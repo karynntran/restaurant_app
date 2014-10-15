@@ -1,10 +1,10 @@
 
-
 body {
 	font-family: 'Voltaire', sans-serif;
 	background-color: darkgray;
 	font-size: 20px;
 	color:white;
+	background-image: '/images/homepage.jpg' 
 }
 
 h1 {
@@ -15,6 +15,31 @@ h1 {
 a {
 	color: orangered;
 }
+
+/*Homepage*/
+
+.landingpage {
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin: auto 0;
+	background-color: white;
+	opacity: 0.4;
+}
+
+#homelink {
+	color: orangered;
+}
+
+
+/*Navigation*/
+
+
+
+
+
+
+/*errors*/
 
 .errors {
 	font-size: 15px;

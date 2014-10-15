@@ -84,7 +84,7 @@ end
 
 get '/parties/:id' do
 	@party = Party.find(params[:id])
-	@orders = Order.find(order.party_id)
+	@orders = Order.where(party_id: params[:id])
 	erb :'party/show'
 end
 

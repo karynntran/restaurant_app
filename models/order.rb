@@ -8,9 +8,7 @@ class Order < ActiveRecord::Base
 	
 	
 	def to_s
-
 	    self.food.name
-
 	end
 
 end

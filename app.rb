@@ -122,7 +122,7 @@ patch '/orders/:id' do
 end
 
 delete '/orders' do
-	party = Party.find(params[:id])
+	party = Party.find(params[:party][:id])
 	Order.destroy(params[:order][:id])
 	redirect "/parties/#{party.id}"
 end

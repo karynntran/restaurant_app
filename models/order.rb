@@ -10,4 +10,8 @@ class Order < ActiveRecord::Base
 	    self.food.name
 	end
 
+	def food_price
+	    "$" + (self.food.price).to_s
+	end
+
 end

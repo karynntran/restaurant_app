@@ -2,10 +2,9 @@
 
 <form action ="/parties/<%= @party.id %>/orders" name="method" method="post">
 	<%@foods.each do |food|%>
-	<input type="checkbox" name="order[food_id]" value="<%=food.id%>"/><%=food.name%><br>
+		<input type="radio" name="order[food_id]" value="<%=food.id%>"/><%=food.name%><br>
 	<%end%>
-	<%@parties.each do |party|%>
-	<input type="hidden" name="order[party_id]" value="<%=party.id%>"/>
-	<%end%>
+	
+ 	<input type="hidden" name="order[party_id]" value="<%=@party.id%>"/>
 	<input type="submit" value="Submit Order">
 </form>

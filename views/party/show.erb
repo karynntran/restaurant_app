@@ -17,4 +17,8 @@
 	<%=order.food_name%>
 	</li>
 <% end %>
+
+<form action = '/parties/<%=@party.id%>/orders' name="method" method="post">
+	<input type ="hidden" name="_method" value="delete"/>
+	<input class = "delete" type ="submit" value="Delete party"/>
 </ul>

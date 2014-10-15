@@ -1,11 +1,18 @@
 <h1>Food Items</h1>
 
-<ul>
+<table>
+	<tr>
+		<td>Food</td>
+		<td>Price</td>
+	</tr>
 <% @foods.each do |food| %>
-	<li>
-	<a href="/foods/<%=food.id%>"><%=food.name%></a>
-	</li>
+	<tr>
+		<td><a href="/foods/<%=food.id%>"><%=food.name%></a>
+		<td>
+			<%=food.price%></a>
+		<td>
+	</tr>
 <% end %>
-</ul>
+</table>
 
 <a href = "/foods/new">Add new food item</a>

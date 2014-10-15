@@ -12,14 +12,21 @@
 <h2>All Outstanding Orders</h2>
 
 <table>
+	<tr>
+		<td>Item</td>
+		<td>Price</td>
+	</tr>
 <% @orders.each do |order| %>
 	<tr>
-	<td><%=order.food_name%></td>
-	<td><form action = '/orders' name="method" method="post">
-		<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
-		<input type ="hidden" name="_method" value="delete"/>
-		<input class = "delete" type ="submit" value="Delete order"/>
-	</form></td>
+		<td><%=order.food_name%></td>
+		<td><%=order.food_price%></td>
+		<td>
+			<form action = '/orders' name="method" method="post">
+			<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
+			<input type ="hidden" name="_method" value="delete"/>
+			<input class = "delete" type ="submit" value="Delete order"/>
+			</form>
+		</td>
 	</tr>
 <% end %>
 <table>

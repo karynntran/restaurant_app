@@ -153,7 +153,6 @@ get '/parties/:id/receipt/print' do
 	# @orders.each do |order|
 	# 	"#{order.food.name}"
 	# 	"#{order.food.price}"
-	end
 end
 
 # allows downloading a receipt

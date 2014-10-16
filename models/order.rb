@@ -14,4 +14,8 @@ class Order < ActiveRecord::Base
 	    "$" + (self.food.price).to_s
 	end
 
+	# def total_sum
+	#     sum = self.inject {|sum,order|sum + self.food.price }
+	# end
+
 end

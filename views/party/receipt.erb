@@ -1,2 +1,26 @@
 <h1>Receipt for <%=@party.party_name%> Party</h1>
 
+<form action = '/parties/<%=@party.id%>' name="method" method="post">
+	<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>
+</form>
+
+<table>
+<% @orders.each do |order| %>
+	<tr>
+		<td>
+		<%= order.food.name %>
+		</td>
+		<td>
+		<%= order.food.price %>
+		</td>
+	<tr>
+<% end %>
+</table>
+
+<p> Suggested Gratuity:</p>
+<p>Total:</p>
+
+Thanks for dining with us!
+</p>
+
+Print receipt?

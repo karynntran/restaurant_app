@@ -1,16 +1,25 @@
 
+html { 
+  background: url(../images/homepage.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+head {
+	background-color: darkgray;
+}
+
 body {
 	font-family: 'Voltaire', sans-serif;
-	background-color: darkgray;
 	font-size: 20px;
 	color:white;
-	background-image: '/images/homepage.jpg' 
 }
 
 h1 {
 	font-family: 'Bad Script', cursive;
 }
-
 
 a {
 	color: orangered;
@@ -18,17 +27,36 @@ a {
 
 /*Homepage*/
 
+
 .landingpage {
 	width: 300px;
 	height: 300px;
 	display: inline-block;
 	margin: auto 0;
+	opacity: 0.8;
+}
+
+.black {
+	background-color: black;
+	opacity: 0.8;
+}
+
+.white {
 	background-color: white;
-	opacity: 0.4;
+	opacity: 0.8;
 }
 
 #homelink {
 	color: orangered;
+	text-align: center;
+	font-size: 25px;
+	margin: auto auto;
+	display: inline-block;
+}
+
+.welcome {
+	font-family: 'Bad Script', cursive;
+	font-size: 25px;
 }
 
 

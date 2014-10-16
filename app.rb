@@ -141,9 +141,19 @@ get '/parties/:id/receipt' do
 		file.write([order.food.name, order.food.price])
 	end
 	file.close
-	erb :'party/receipt'
 
-	# Saves the party's receipt data to a file. Displays the content of the receipt. Offer the file for download.
+	erb :'party/receipt'
+end
+
+get '/parties/:id/receipt/print' do
+	attachment "receipt.txt"
+	# # party = Party.id
+	# orders = Order.where(party_id: params[:id])
+	# @orders = Order.party_id
+	# @orders.each do |order|
+	# 	"#{order.food.name}"
+	# 	"#{order.food.price}"
+	end
 end
 
 # allows downloading a receipt

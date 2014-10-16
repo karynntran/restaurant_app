@@ -121,6 +121,7 @@ end
 # 	# @order = Order.find(params[:id])
 # 	# @order.update(params[:order])
 # 	redirect "/parties/#{party.id}"
+### MARK ITEM AS FREE
 # end
 
 delete '/orders' do
@@ -131,29 +132,26 @@ end
 
 #####RECEIPTS AND CHECKOUT ######
 
-get '/parties/:id/receipt' do
-	@party = Party.find(params[:id])
+# get '/parties/:id/receipt' do
+# 	@party = Party.find(params[:id])
 
-	file = File.open('receipt.txt', 'w')
+# 	file = File.open('receipt.txt', 'w')
 
-	@orders = Order.where(party_id: params[:id])
-	@orders.each do |order|
-		file.write([order.food.name, order.food.price])
-	end
-	file.close
+# 	@orders = Order.where(party_id: params[:id])
+# 	@orders.each do |order|
+# 		file.write([order.food.name, order.food.price])
+# 	end
+# 	file.close
 
-	erb :'party/receipt'
-end
+# 	erb :'party/receipt'
+# end
 
-get '/parties/:id/receipt/print' do
-	attachment "receipt.txt"
-	# # party = Party.id
-	# orders = Order.where(party_id: params[:id])
-	# @orders = Order.party_id
-	# @orders.each do |order|
-	# 	"#{order.food.name}"
-	# 	"#{order.food.price}"
-end
+# get '/parties/:id/receipt/print' do
+# 	attachment "receipt.txt"
+# 	file = File.open('receipt.txt', 'w')
+# 		'receipt.txt' << receipt.erb
+# 	end
+# end
 
 # allows downloading a receipt
 

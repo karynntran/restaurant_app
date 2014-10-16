@@ -13,6 +13,7 @@ CREATE TABLE parties (
   id SERIAL PRIMARY KEY,
   party_name VARCHAR(100),
   guest_num INTEGER
+  paid BOOLEAN;
 );
 
 CREATE TABLE orders (

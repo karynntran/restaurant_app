@@ -1,1 +1,0 @@
-["Spicy Tuna Rolls", 10]["California Rolls", 9]["Ravioli", 12]["Spicy Tuna Rolls", 10]["Fettucine Alfredo", 13]

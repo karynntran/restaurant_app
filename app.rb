@@ -66,6 +66,8 @@ end
 
 get '/parties' do
 	@parties = Party.all
+	@currentparties = Party.where(:paid == false)
+	@paidparties = Party.where(:paid == true)
 	erb :'party/index'
 end
 
@@ -160,16 +162,5 @@ get '/parties/:id/receipt' do
 	erb :'party/receipt'
 end
 
-get '/parties/:id/receipt/print' do	
-	@orders = Order.where(party_id: params[:id])
-
-	file = File.open('receipt.txt', 'w')
-
-	@orders.each do |order|
-		file.write([order.food.name, order.food.price])
-	end
-	file.close
-	attachment "receipt.txt"
-end
 
 

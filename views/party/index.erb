@@ -5,7 +5,16 @@
 
 	<h2>Current Parties</h2>
 	<ul>
-	<% @parties.each do |party| %>
+	<% @currentparties.each do |party| %>
+		<li>
+		<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
+		</li>
+	<% end %>
+	</ul>
+
+	<h2>Parties that have Closed</h2>
+	<ul>
+	<% @paidparties.each do |party| %>
 		<li>
 		<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
 		</li>

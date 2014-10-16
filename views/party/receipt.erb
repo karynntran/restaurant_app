@@ -28,18 +28,15 @@
 	</table>
 
 	<p>Suggested Gratuity:</p>
-	<p>15%: $<%= @party.one_gratuity%></p>
-	<p>18%: $<%= @party.two_gratuity%></p>
-	<p>20%: $<%= @party.three_gratuity%></p>
+	15%: $<%= @party.one_gratuity%><br>
+	18%: $<%= @party.two_gratuity%><br>
+	20%: $<%= @party.three_gratuity%><br>
 
 
 	<p>===========================</p>
 
-	<a href = "/parties/:id/receipt/print">Print receipt?</a>
+	<a href="javascript:if(window.print)window.print()">PRINT RECEIPT</a>
 
 	<p>===========================</p>
 
-	<p>
-	Checkout 
-	</p>
 </div>

@@ -20,6 +20,8 @@ body {
 h1 {
 	font-family: 'Bad Script', cursive;
 	color: black;
+	text-align: right;
+	padding: 20px;
 }
 
 h2 {
@@ -76,6 +78,7 @@ p {
 	background-color: black;
 	opacity: 0.8;
 	float: left;
+	margin-right: 10px;
 }
 
 .white {

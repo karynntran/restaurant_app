@@ -32,16 +32,17 @@ a {
 	color: orangered;
 }
 
-.nav a {
+.nav {
 	background-color: darkgray;
 	color:white;
+	text-decoration: none;
 }
 
 .wrapper {
 	background-color: white;
 	opacity: 0.8;
 	width: 500px;
-	height: 700px;
+	height: 600px;
 	padding: 0 10px;
 }
 

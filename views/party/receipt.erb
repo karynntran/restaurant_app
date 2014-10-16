@@ -1,43 +1,45 @@
-<h1>Receipt for <%=@party.party_name%> Party</h1>
+<div class = "wrapper">	
+	<h1>Receipt for <%=@party.party_name%> Party</h1>
 
-<form action = '/parties/<%=@party.id%>' name="method" method="post">
-	<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>
-</form>
+	<form action = '/parties/<%=@party.id%>' name="method" method="post">
+		<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>
+	</form>
 
-<table>
-<% @orders.each do |order| %>
-	<tr>
-		<td>
-		<%= order.food.name %>
-		</td>
-		<td>
-		<%= order.food.price %>
-		</td>
-	<tr>
-<% end %>
-</table>
+	<table>
+	<% @orders.each do |order| %>
+		<tr>
+			<td>
+			<%= order.food.name %>
+			</td>
+			<td>
+			<%= order.food.price %>
+			</td>
+		<tr>
+	<% end %>
+	</table>
 
-<p>===========================</p>
+	<p>===========================</p>
 
-<table>
-	<tr>
-		<td>Total:</td>
-		<td>$<%= @party.subtotal%></td>
-	</tr>
-</table>
+	<table>
+		<tr>
+			<td>Total:</td>
+			<td>$<%= @party.subtotal%></td>
+		</tr>
+	</table>
 
-<p>Suggested Gratuity:</p>
-<p>15%: $<%= @party.one_gratuity%></p>
-<p>18%: $<%= @party.two_gratuity%></p>
-<p>20%: $<%= @party.three_gratuity%></p>
+	<p>Suggested Gratuity:</p>
+	<p>15%: $<%= @party.one_gratuity%></p>
+	<p>18%: $<%= @party.two_gratuity%></p>
+	<p>20%: $<%= @party.three_gratuity%></p>
 
 
-<p>===========================</p>
+	<p>===========================</p>
 
-<a href = "/parties/:id/receipt/print">Print receipt?</a>
+	<a href = "/parties/:id/receipt/print">Print receipt?</a>
 
-<p>===========================</p>
+	<p>===========================</p>
 
-<p>
-Checkout 
-</p>
+	<p>
+	Checkout 
+	</p>
+</div>

@@ -1,18 +1,20 @@
-<h1>Food Items</h1>
+<div class = "wrapper">
+	<h1>Food Items</h1>
 
-<table>
-	<tr>
-		<td>Food</td>
-		<td>Price</td>
-	</tr>
-<% @foods.each do |food| %>
-	<tr>
-		<td><a href="/foods/<%=food.id%>"><%=food.name%></a>
-		<td>
-			<%=food.price%></a>
-		<td>
-	</tr>
-<% end %>
-</table>
+	<table>
+		<tr>
+			<td>Food</td>
+			<td>Price</td>
+		</tr>
+	<% @foods.each do |food| %>
+		<tr>
+			<td><a href="/foods/<%=food.id%>"><%=food.name%></a>
+			<td>
+				<%=food.price%></a>
+			<td>
+		</tr>
+	<% end %>
+	</table>
 
-<a class ="nav" href = "/foods/new">Add new food item</a>
+	<a class ="nav" href = "/foods/new">Add new food item</a>
+</div>

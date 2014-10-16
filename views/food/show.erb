@@ -1,10 +1,12 @@
-<h1><%=@food.name%></h1>
+<div class = "wrapper">
+	<h1><%=@food.name%></h1>
 
-<p>Cuisine: <%=@food.cuisine%></p>
-<p>Price: <%=@food.price%></p>
+	<p>Cuisine: <%=@food.cuisine%></p>
+	<p>Price: <%=@food.price%></p>
 
-<a href="/foods/<%=@food.id%>/edit">Edit</a> or 
-<form action = '/foods/<%=@food.id%>' name="method" method="post">
-	<input type ="hidden" name="_method" value="delete"/>
-	<input type ="submit" value="Delete food item"/>
-</form>
+	<a href="/foods/<%=@food.id%>/edit">Edit</a> or 
+	<form action = '/foods/<%=@food.id%>' name="method" method="post">
+		<input type ="hidden" name="_method" value="delete"/>
+		<input type ="submit" value="Delete food item"/>
+	</form>
+</div>

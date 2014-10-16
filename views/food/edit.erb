@@ -1,12 +1,14 @@
-<h1>Edit Food Item</h1>
+<div class = "wrapper">
+	<h1>Edit Food Item</h1>
 
 
-<form action = '/foods/<%=@food.id%>' name="method" method="post">
-	<input type ="hidden" name="_method" value="patch"/>
-	<p>Food Name:</p><input type ="text" name="food[name]" value="<%=@food.name%>"/>
-	<p>Cuisine:</p><input type ="text" name="food[cuisine]" value="<%=@food.cuisine%>"/>
-	<p>Price($):</p><input type ="text" name="food[price]" value="<%=@food.price%>"/>
-	<input type ="submit" value="Update Food Item"/>
-</form>
+	<form action = '/foods/<%=@food.id%>' name="method" method="post">
+		<input type ="hidden" name="_method" value="patch"/>
+		<p>Food Name:</p><input type ="text" name="food[name]" value="<%=@food.name%>"/>
+		<p>Cuisine:</p><input type ="text" name="food[cuisine]" value="<%=@food.cuisine%>"/>
+		<p>Price($):</p><input type ="text" name="food[price]" value="<%=@food.price%>"/>
+		<input type ="submit" value="Update Food Item"/>
+	</form>
 
-<a class ="nav" href = "/foods">See all food items?</a>
+	<a class ="nav" href = "/foods">See all food items?</a>
+</div>

@@ -19,12 +19,16 @@ class Party < ActiveRecord::Base
 		total
 	end
 
-	def gratuity
+	def one_gratuity
 		(self.subtotal.to_i * 0.15).to_i
 	end
 
-	def total_cost
-		(self.subtotal + self.gratuity).to_i
+	def two_gratuity
+		(self.subtotal.to_i * 0.18).to_i
+	end
+
+	def three_gratuity
+		(self.subtotal.to_i * 0.20).to_i
 	end
 
 

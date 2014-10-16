@@ -17,28 +17,26 @@
 <% end %>
 </table>
 
-===========================
+<p>===========================</p>
 
 <table>
 	<tr>
-		<td>Subtotal:</td>
-		<td>$<%= @party.subtotal%></td>
-	</tr>
-	<tr>
-		<td>Gratuity:</td>
-		<td>$<%= @party.gratuity%></td>
-	</tr>
-	<tr>
 		<td>Total:</td>
-		<td>$<%= @party.total_cost%></td>
+		<td>$<%= @party.subtotal%></td>
 	</tr>
 </table>
 
-===========================
+<p>Suggested Gratuity:</p>
+<p>15%: $<%= @party.one_gratuity%></p>
+<p>18%: $<%= @party.two_gratuity%></p>
+<p>20%: $<%= @party.three_gratuity%></p>
+
+
+<p>===========================</p>
 
 <a href = "/parties/:id/receipt/print">Print receipt?</a>
 
-===========================
+<p>===========================</p>
 
 <p>
 Checkout 

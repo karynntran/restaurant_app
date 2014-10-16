@@ -5,7 +5,7 @@ require 'pry'
 class Order < ActiveRecord::Base
 	belongs_to(:party)
   	belongs_to(:food)
-	
+
 	def food_name
 	    self.food.name
 	end
@@ -13,6 +13,5 @@ class Order < ActiveRecord::Base
 	def food_price
 	    "$" + (self.food.price).to_s
 	end
-
 
 end

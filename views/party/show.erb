@@ -15,7 +15,11 @@
 	<input class = "delete" type ="submit" value="Delete party"/>
 </form>
 
-<a href = "/parties/<%=@party.id%>/orders/new">Add an order</a>
+<% if @error %>
+	<%= @error %>
+<% else %>
+	<a href = "/parties/<%=@party.id%>/orders/new">Add an order</a>
+<% end %>
 
 <h2>All Orders</h2>
 

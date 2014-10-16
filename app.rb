@@ -93,7 +93,12 @@ get '/parties/:id' do
 	@party = Party.find(params[:id])
 	@orders = Order.where(party_id: params[:id])
 	
-	@party.paid ? "Paid" : "Not Paid"
+	# @party.paid ? "Paid" : "Not Paid"
+	begin
+		@party.add_food_for_paid
+	rescue Party::AddNewFoodforPaid => e
+		@error = e
+	end
 
 	erb :'party/show'
 end

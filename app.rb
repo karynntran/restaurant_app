@@ -135,6 +135,7 @@ end
 get '/parties/:id/receipt' do
 	@party = Party.find(params[:id])
 	@orders = Order.where(party_id: params[:id])
+	@food = Order.where(id: params[:id])
 
 	file = File.open('receipt.txt', 'w')
 
@@ -148,6 +149,11 @@ end
 
 get '/parties/:id/receipt/print' do	
 	attachment "receipt.txt"
+
+	File.open('receipt.txt', 'w') do |f|
+  		f << erb.receipt(binding)
+  		f.close
+  	end
 end
 
 # allows downloading a receipt

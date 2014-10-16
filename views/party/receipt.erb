@@ -17,28 +17,29 @@
 <% end %>
 </table>
 
+===========================
+
 <table>
-<% @orders.each do |order| %>
 	<tr>
-		<td>Suggested Gratuity:</td>
-		<td>Subtotal</td>
-		<td>Total</td>
+		<td>Subtotal:</td>
+		<td>$<%= @party.subtotal%></td>
 	</tr>
 	<tr>
-		<td>
-		<%= order.subtotal %>
-		</td>
-		<td>
-		<%= order.gratuity %>
-		</td>
-		<td>
-		<%= order.total_sum %>
-		</td>
+		<td>Gratuity:</td>
+		<td>$<%= @party.gratuity%></td>
+	</tr>
 	<tr>
-<% end %>
+		<td>Total:</td>
+		<td>$<%= @party.total_cost%></td>
+	</tr>
 </table>
 
+===========================
+
+<p>
 Thanks for dining with us!
 </p>
+
+===========================
 
 <a href = "/parties/:id/receipt/print">Print receipt?</a>

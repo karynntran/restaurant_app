@@ -7,7 +7,7 @@ class Party < ActiveRecord::Base
 
   	def add_food_for_paid
 		if self.paid == true
-			raise AddNewFoodforPaid, "This party has already left"
+			raise AddNewFoodforPaid, "**This party has already left**"
 		end	
 	end
 

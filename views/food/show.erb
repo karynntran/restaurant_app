@@ -4,9 +4,11 @@
 	<p>Cuisine: <%=@food.cuisine%></p>
 	<p>Price: <%=@food.price%></p>
 
-	<a href="/foods/<%=@food.id%>/edit">Edit</a> or 
+	<a class = "nav" href="/foods/<%=@food.id%>/edit">Edit</a> 
 	<form action = '/foods/<%=@food.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="delete"/>
-		<input type ="submit" value="Delete food item"/>
+		<input class ="delete" type ="submit" value="Delete food item"/>
+
+	<a class ="nav" href = "/foods">See all menu items</a>
 	</form>
 </div>

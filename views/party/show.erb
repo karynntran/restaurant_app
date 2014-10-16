@@ -11,18 +11,18 @@
 		<input type ="submit" value="Submit"/>
 	</form>
 
-	<a href="/parties/<%=@party.id%>/edit">Edit</a> or<form action = '/parties/<%=@party.id%>' name="method" method="post">
+	<a class ="nav" href="/parties/<%=@party.id%>/edit">Edit</a><form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="delete"/>
 		<input class = "delete" type ="submit" value="Delete party"/>
 	</form>
 
+
+	<h2>All Orders</h2>
 	<% if @error %>
-		<%= @error %>
+		<span style="color:red"><%= @error %></span>
 	<% else %>
 		<a class ="nav" href = "/parties/<%=@party.id%>/orders/new">Add an order</a>
 	<% end %>
-
-	<h2>All Orders</h2>
 
 
 	<table>

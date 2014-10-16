@@ -14,7 +14,7 @@ head {
 body {
 	font-family: 'Voltaire', sans-serif;
 	font-size: 20px;
-	color:white;
+	color:black;
 }
 
 h1 {
@@ -32,23 +32,34 @@ a {
 	color: orangered;
 }
 
+p {
+	color: purple;
+}
+
 .nav {
 	background-color: darkgray;
 	color:white;
 	text-decoration: none;
+	margin-top: 20px;
+	font-size: 20px;
 }
 
 .wrapper {
 	background-color: white;
 	opacity: 0.8;
 	width: 500px;
-	height: 600px;
-	padding: 0 10px;
+	height: auto;
+	padding: 0 0 10px 10px;
 }
 
 /*Homepage*/
 
+.welcome {
+	color: white;
+}
+
 .landing {
+	padding-top: 20px;
 	display: inline-block;
 	margin: auto 0;
 }
@@ -78,6 +89,12 @@ a {
 	text-align: center;
 	font-size: 25px;
 	margin: auto auto;
+	text-decoration: none;
+}
+
+#navlinks {
+	color: white;
+	text-decoration: none;
 }
 
 /*Navigation*/
@@ -104,9 +121,6 @@ a {
 }
 
 
-
-
-
 /*errors*/
 
 .errors {
@@ -121,17 +135,18 @@ a {
 .delete {
 	background-color: darkgray;
 	border: none;
-	text-decoration: underline;
-	color: purple;
+	text-decoration: none;
+	color: white;
 	font-size: 20px;
 	font-family: 'Voltaire', sans-serif;
 	display: inline-block;
+	padding: 0;
 }
 
-/*page data*/
-/*
-.container {
-	background-color: white;
-	opacity: 0.8;
-	padding: 10px;
-}*/
+form {
+	margin: 15px;
+}
+
+table {
+	margin: 15px;
+}

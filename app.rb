@@ -132,26 +132,23 @@ end
 
 #####RECEIPTS AND CHECKOUT ######
 
-# get '/parties/:id/receipt' do
-# 	@party = Party.find(params[:id])
+get '/parties/:id/receipt' do
+	@party = Party.find(params[:id])
+	@orders = Order.where(party_id: params[:id])
 
-# 	file = File.open('receipt.txt', 'w')
+	file = File.open('receipt.txt', 'w')
 
-# 	@orders = Order.where(party_id: params[:id])
-# 	@orders.each do |order|
-# 		file.write([order.food.name, order.food.price])
-# 	end
-# 	file.close
+	@orders.each do |order|
+		file.write([order.food.name, order.food.price])
+	end
+	file.close
 
-# 	erb :'party/receipt'
-# end
+	erb :'party/receipt'
+end
 
-# get '/parties/:id/receipt/print' do
-# 	attachment "receipt.txt"
-# 	file = File.open('receipt.txt', 'w')
-# 		'receipt.txt' << receipt.erb
-# 	end
-# end
+get '/parties/:id/receipt/print' do	
+	attachment "receipt.txt"
+end
 
 # allows downloading a receipt
 

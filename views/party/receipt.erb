@@ -17,9 +17,26 @@
 <% end %>
 </table>
 
-<p>Suggested Gratuity:</p>
-
-<p>Total: <%=@orders.food.price.sum%> </p>
+<table>
+<% @orders.each do |order| %>
+	<tr>
+		<td>Suggested Gratuity:</td>
+		<td>Subtotal</td>
+		<td>Total</td>
+	</tr>
+	<tr>
+		<td>
+		<%= order.subtotal %>
+		</td>
+		<td>
+		<%= order.gratuity %>
+		</td>
+		<td>
+		<%= order.total_sum %>
+		</td>
+	<tr>
+<% end %>
+</table>
 
 Thanks for dining with us!
 </p>

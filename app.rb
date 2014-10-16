@@ -92,12 +92,20 @@ end
 get '/parties/:id' do
 	@party = Party.find(params[:id])
 	@orders = Order.where(party_id: params[:id])
+	
+	@party.paid ? "Paid" : "Not Paid"
+
 	erb :'party/show'
 end
 
 delete '/parties/:id' do
 	party = Party.destroy(params[:id])
 	redirect "/parties"
+end
+
+patch '/parties/:id/checkout' do
+	party = Party.find(params[:id])
+	party.update(params[:paid])
 end
 
 ### ORDER FROM PARTIES###
@@ -148,16 +156,15 @@ get '/parties/:id/receipt' do
 end
 
 get '/parties/:id/receipt/print' do	
-	attachment "receipt.txt"
+	@orders = Order.where(party_id: params[:id])
 
-	File.open('receipt.txt', 'w') do |f|
-  		f << erb.receipt(binding)
-  		f.close
-  	end
+	file = File.open('receipt.txt', 'w')
+
+	@orders.each do |order|
+		file.write([order.food.name, order.food.price])
+	end
+	file.close
+	attachment "receipt.txt"
 end
 
-# allows downloading a receipt
 
-# patch '/parties/:id/checkout' do
-# 	#marks the party as paid
-# end

@@ -2,6 +2,14 @@
 
 <p>Number of Guests: <%=@party.guest_num%></p>
 
+<p>Paid: <%=@party.paid%> </p>
+<form action = '/parties/<%=@party.id%>' name="method" method="post">
+	<input type ="hidden" name="_method" value="patch"/>
+	Paid<input type ="radio" name="party[paid]" value="true"/>
+	Not Paid<input type ="radio" name="party[paid]" value="false"/>
+	<input type ="submit" value="Submit"/>
+</form>
+
 <a href="/parties/<%=@party.id%>/edit">Edit</a> or<form action = '/parties/<%=@party.id%>' name="method" method="post">
 	<input type ="hidden" name="_method" value="delete"/>
 	<input class = "delete" type ="submit" value="Delete party"/>
@@ -9,7 +17,7 @@
 
 <a href = "/parties/<%=@party.id%>/orders/new">Add an order</a>
 
-<h2>All Outstanding Orders</h2>
+<h2>All Orders</h2>
 
 <table>
 	<tr>

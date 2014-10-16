@@ -1,12 +1,15 @@
-<h1>All Parties</h1>
+<div class = "wrapper">	
+	<h1>All Parties</h1>
 
-<a href = "/parties/new">Add new party?</a>
+	<a class ="nav" href = "/parties/new">Add new party?</a>
 
-<ul>
-<% @parties.each do |party| %>
-	<li>
-	<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
-	</li>
-<% end %>
-</ul>
+	<h2>Current Parties</h2>
+	<ul>
+	<% @parties.each do |party| %>
+		<li>
+		<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
+		</li>
+	<% end %>
+	</ul>
+</div>	
 

@@ -19,31 +19,57 @@ body {
 
 h1 {
 	font-family: 'Bad Script', cursive;
+	color: black;
+}
+
+h2 {
+	font-family: 'Voltaire', sans-serif;
+	font-size: 20px;
+	color: purple;
 }
 
 a {
 	color: orangered;
 }
 
+.nav a {
+	background-color: darkgray;
+	color:white;
+}
+
+.wrapper {
+	background-color: white;
+	opacity: 0.8;
+	width: 500px;
+	height: 700px;
+	padding: 0 10px;
+}
+
 /*Homepage*/
 
-
-.landingpage {
-	width: 300px;
-	height: 300px;
+.landing {
 	display: inline-block;
 	margin: auto 0;
-	opacity: 0.8;
+}
+
+.box {
+	width: 300px;
+	height: 300px;
+	margin: auto 0;
 }
 
 .black {
+	width: 500px;
+	height: 500px;
 	background-color: black;
 	opacity: 0.8;
+	float: left;
 }
 
 .white {
 	background-color: white;
 	opacity: 0.8;
+	float: right;
 }
 
 #homelink {
@@ -51,13 +77,30 @@ a {
 	text-align: center;
 	font-size: 25px;
 	margin: auto auto;
-	display: inline-block;
 }
-
-
 
 /*Navigation*/
 
+.navigation {
+	background-color: black;
+	opacity: 0.8;
+	margin: 0 -10px;
+	height: 25px;
+}
+
+.navigation ul {
+	text-align: right;
+}
+
+.navigation li {
+	display: inline;
+	padding: 0 10px;
+	margin: auto 0;
+	text-decoration: none;
+	color: white;
+	list-style-type: none;
+	font-size: 18px;
+}
 
 
 

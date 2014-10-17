@@ -22,7 +22,10 @@
 	<% @paid_parties.each do |party| %>
 		<tr>
 			<td>
-				<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
+				<a href="/parties/<%=party.id%>"><%=party.party_name%></a> 
+			</td>
+			<td>
+				Party of <%=party.guest_num%>
 			</td>
 		</tr>
 	<% end %>

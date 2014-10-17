@@ -4,10 +4,18 @@
 	<p>Cuisine: <%=@food.cuisine%></p>
 	<p>Price: <%=@food.price%></p>
 
-	<a class = "nav" href="/foods/<%=@food.id%>/edit">Edit</a> 
-	<form action = '/foods/<%=@food.id%>' name="method" method="post">
-		<input type ="hidden" name="_method" value="delete"/>
-		<input class ="delete" type ="submit" value="Delete food item"/>
+	<table class = "edit_delete">
+		<tr>
+			<td>
+				<a class = "nav" href="/foods/<%=@food.id%>/edit">Edit</a> 
+			</td>
+			<td>
+				<form action = '/foods/<%=@food.id%>' name="method" method="post">
+				<input type ="hidden" name="_method" value="delete"/>
+				<input class ="delete" type ="submit" value="Delete food item"/>
+			</td>
+		</tr>
+	</table>
 
 	<a class ="nav" href = "/foods">See all menu items</a>
 	</form>

@@ -1,5 +1,20 @@
 <div class = "wrapper">
 	<h1>Party Name: <%=@party.party_name%></h1>
+	
+	<table class = "edit_delete">
+		<tr>
+			<td>
+				<a class ="nav" href="/parties/<%=@party.id%>/edit">Edit</a>
+			</td>
+			<td>
+				<form action = '/parties/<%=@party.id%>' name="method" method="post">
+				<input type ="hidden" name="_method" value="delete"/>
+				<input class = "delete" type ="submit" value="Delete party"/>
+			</td>
+		</form>
+		<tr>
+	</table>
+	
 
 	<p>Number of Guests: <%=@party.guest_num%></p>
 
@@ -11,10 +26,6 @@
 		<input type ="submit" value="Submit"/>
 	</form>
 
-	<a class ="nav" href="/parties/<%=@party.id%>/edit">Edit</a><form action = '/parties/<%=@party.id%>' name="method" method="post">
-		<input type ="hidden" name="_method" value="delete"/>
-		<input class = "delete" type ="submit" value="Delete party"/>
-	</form>
 
 
 	<h2>All Orders</h2>

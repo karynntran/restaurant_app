@@ -44,6 +44,7 @@ p {
 	text-decoration: none;
 	margin-top: 20px;
 	font-size: 20px;
+	padding: 0 5px;
 }
 
 .wrapper {
@@ -135,6 +136,11 @@ p {
 
 /*buttons*/
 
+.edit_delete {
+	margin: 0;
+	padding: 0;
+}
+
 .delete {
 	background-color: darkgray;
 	border: none;
@@ -143,7 +149,7 @@ p {
 	font-size: 20px;
 	font-family: 'Voltaire', sans-serif;
 	display: inline-block;
-	padding: 0;
+	padding: 0 5px;
 }
 
 form {

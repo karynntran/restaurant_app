@@ -21,9 +21,9 @@ NAVIGATION
 -----------------------
 
 Homepage
-	-Parties
-		-Current and Checked Out Parties
-			-ADD New Party
+	*Parties
+		**Current and Checked Out Parties
+			***ADD New Party
 				-ADD Party Name and Number of Guests
 			-SELECT a Party
 				-UPDATE Paid Status

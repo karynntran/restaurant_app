@@ -137,12 +137,11 @@ post '/parties/:id/orders' do
 	redirect "/parties/#{@party.id}"
 end
 
-##update an order to mark as free
+# #update an order to mark as free
 # patch '/parties/:id/orders' do
 # 	party = Party.find(params[:id])
 # 	order = Order.where(party_id: params[:id])
-# 	order.update(free: true)
-# 	order.update(food_price: 0)
+# 	order.update(params[:order])
 # end
 
 delete '/orders' do

@@ -18,12 +18,14 @@
 	</table>
 
 	<h2>CHECKED OUT PARTIES (ALREADY PAID)</h2>
-	<ul>
+	<table>
 	<% @paid_parties.each do |party| %>
-		<li>
-		<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
-		</li>
+		<tr>
+			<td>
+				<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
+			</td>
+		</tr>
 	<% end %>
-	</ul>
+	</table>
 </div>	
 

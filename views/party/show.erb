@@ -58,7 +58,7 @@
 				</form>
 			</td>
 <!-- 			<td>
-				<form action = '/orders' name="method" method="post">
+				<form action = '/parties/<%=@party.id%>/orders' name="method" method="post">
 					<input type ="hidden" name="_method" value="patch"/>
 					<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
 					<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>

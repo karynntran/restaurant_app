@@ -1,36 +1,51 @@
-It's the future! In the olden days... waitstaff needed to keep track of a party's order by hand!
-A client has requested an application to help!
-Here is what they wrote:
+Welcome to the Wine and Dine Restaurant Employee Page
 
------------
+![alt tag](http://imgur.com/N5QxVRw)
 
-I want an application so our waitstaff can manage our food orders...
+OFFERED FUNCTIONALITIES
+-----------------------
+	
+	PARTY MANAGEMENT:
+		-Main party page that shows parties in queue and parties already paid 
+		-Ability to add parties with party name and number of guests
+		-Ability to view a single party, and edit or delete its information
+		-Ability to add, edit and delete orders on a party's specific page
+		-Ability to see if a party has paid and update paid status
+		
+	MENU MANAGEMENT:
+		-Main menu page that displays all available food and drink items 
+		-Ability to add new food and drink items with name, cuisine type, and price
+		-Ability to view a single menu item, and edit or delete its information
 
-Overall... an employee should be able to...
-  a: select a party of customers
-  b: select food items the customers have ordered
-  c: save a receipt
+NAVIGATION
+-----------------------
 
- -----------
+Homepage
+	-Parties
+		-Current and Checked Out Parties
+			-ADD New Party
+				-ADD Party Name and Number of Guests
+			-SELECT a Party
+				-UPDATE Paid Status
+				-EDIT a Party Name and Number of Guests
+				-DELETE Party
+				-VIEW Party Receipt
+					-PRINT Party Receipt Option
+				-DISPLAY all party's orders
+					-ADD a New Order
+						-SELECT Items for Order
+	-Menu
+		-Menu Items
+			-ADD New Menu Item
+				-ADD Menu Name, Cuisine Type, Price
+			-SELECT a Menu Item
+				-EDIT a Menu Item with Name, Cuisine Type and Price
+				-DELETE a Menu Item
 
-Food: An item of food on the menu (aka menu item)
 
-name?
-cuisine type?
-what is the price?
-any allergens?
-Order: Join between Food items and Party
+ADDITIONAL INFORMATION
+-----------------------
 
-Party: A single group of people
+This app has been built with Ruby, Sinatra, HTML/CSS, and Javascript.
 
-table number?
-number of guests?
-did they pay yet?
-
- -----------
-
-As an employee, I want to be able to add new food items... so the menu can change
-As an employee, I want to be able to edit previously added food items... so I can update descriptions
-As an employee, I want to be able to delete previously added food items... so I can remove bad food
-As an employee, I want to be able to add food items to a party as they order them... so I can keep track of a party's orders
-As an employee, I want to be able to create a receipt ... so I can print it
+For any questions, please contact the developer at karynn@example.com

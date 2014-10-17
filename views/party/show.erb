@@ -16,9 +16,9 @@
 	</table>
 	
 
-	<p>Number of Guests: <%=@party.guest_num%></p>
+	<p>NUMBER OF GUESTS: <%=@party.guest_num%></p>
 
-	<p>Paid: <%=@paid_status%> </p>
+	<p>PAID STATUS: <%=@paid_status%> </p>
 	<form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="patch"/>
 		Paid<input type ="radio" name="party[paid]" value="true"/>
@@ -28,7 +28,7 @@
 
 
 
-	<h2>All Orders</h2>
+	<h2>ALL ORDERS</h2>
 	<% if @error %>
 		<span style="color:red"><%= @error %></span>
 	<% else %>
@@ -39,8 +39,8 @@
 
 	<table>
 		<tr>
-			<td>Item</td>
-			<td>Price</td>
+			<td>ITEM</td>
+			<td>PRICE</td>
 		</tr>
 	<% @orders.each do |order| %>
 		<tr>

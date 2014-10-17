@@ -1,6 +1,9 @@
 <div class = "wrapper">
 	<h1>Add Party</h1>
 
+	<a class ="nav" href = "/parties">See all parties?</a>
+	
+
 	<form action = '/parties' name="method" method="post">
 		<p>Name of Party:</p><input type ="text" name="party[party_name]" placeholder="Name of Party"/>
 		<p>Number of Guests:</p><input type ="text" name="party[guest_num]" placeholder="Number of guests"/>
@@ -8,7 +11,5 @@
 		<input type ="submit" value="Add Party">
 	</form>
 
-	<p>
-		<a class ="nav" href = "/parties">See all parties?</a>
-	</p>
+	
 </div>

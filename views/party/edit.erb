@@ -1,6 +1,8 @@
 <div class = "wrapper">
 	<h1>Edit Party Information</h1>
 
+	<a class ="nav" href = "/parties">See all parties?</a>
+
 	<form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="patch"/>
 		<p>Party Name:</p><input type ="text" name="party[party_name]" value="<%=@party.party_name%>"/>
@@ -8,5 +10,5 @@
 		<input type ="submit" value="Update Party Info"/>
 	</form>
 
-	<a class ="nav" href = "/parties">See all parties?</a>
+	
 </div>

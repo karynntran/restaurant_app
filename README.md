@@ -51,6 +51,6 @@ B.MENU
 ADDITIONAL INFORMATION
 -----------------------
 
-This app has been built with Ruby, Sinatra, HTML/CSS, and Javascript.
+This app has been built with Ruby, Sinatra, SQL, HTML/CSS, and Javascript.
 
 For any questions, please contact the developer at karynn@example.com

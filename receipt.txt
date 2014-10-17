@@ -1,1 +1,1 @@
-["California Rolls", 10]["Pad Thai", 12]["Pad Thai", 12]
+["Escargot", 16]["Lumpia ", 8]["Kimchi Fried Rice", 11]

@@ -93,12 +93,12 @@ end
 
 get '/parties/:id' do
 	@party = Party.find(params[:id])
+	# food = Food.find(params[:id])
 	@orders = Order.where(party_id: params[:id])
-	
+	# @one_order = Order.where(food_id: params[:party_id])
+
 	@paid_status = @party.paid ? "Paid" : "Not Paid"
-	# @orders.each do |order|
-	# 	@order_status = order.free ? "Free" : "Not Free"
-	# end
+	# @order_status = @one_order.free ? "Free" : "Not Free"
 
 	begin
 		@party.add_food_for_paid

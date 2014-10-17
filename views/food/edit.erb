@@ -1,6 +1,7 @@
 <div class = "wrapper">
 	<h1>Edit <%=@food.name%></h1>
 
+	<a class ="nav" href = "/foods">See all food items?</a>
 
 	<form action = '/foods/<%=@food.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="patch"/>
@@ -10,5 +11,5 @@
 		<input type ="submit" value="Update Food Item"/>
 	</form>
 
-	<a class ="nav" href = "/foods">See all food items?</a>
+
 </div>

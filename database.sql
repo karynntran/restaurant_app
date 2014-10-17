@@ -1,4 +1,4 @@
-CREATE DATABASE restaurant_app;
+CREATE DATABASE restaurant_db;
 
 \c restaurant_db;
 

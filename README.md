@@ -21,27 +21,29 @@ NAVIGATION
 -----------------------
 
 HOMEPAGE
-	-PARTIES
-		-Current and Checked Out Parties
-			-ADD New Party
-				-ADD Party Name and Number of Guests
-			-SELECT a Party
-				-UPDATE Paid Status
-				-EDIT a Party Name and Number of Guests
-				-DELETE Party
-				-VIEW Party Receipt
-					-PRINT Party Receipt Option
-				-DISPLAY all party's orders
-					-ADD a New Order
-						-SELECT Items for Order
-					-DELETE an order
-	-MENU
-		-Menu Items
-			-ADD New Menu Item
-				-ADD Menu Name, Cuisine Type, Price
-			-SELECT a Menu Item
-				-EDIT a Menu Item with Name, Cuisine Type and Price
-				-DELETE a Menu Item
+ 
+-PARTIES
+-Current and Checked Out Parties
+-ADD New Party
+-ADD Party Name and Number of Guests
+-SELECT a Party
+-UPDATE Paid Status
+-EDIT a Party Name and Number of Guests
+-DELETE Party
+-VIEW Party Receipt
+-PRINT Party Receipt Option
+-DISPLAY all party's orders
+-ADD a New Order
+-SELECT Items for Order
+-DELETE an order
+
+-MENU
+-Menu Items
+-ADD New Menu Item
+-ADD Menu Name, Cuisine Type, Price
+-SELECT a Menu Item
+-EDIT a Menu Item with Name, Cuisine Type and Price
+-DELETE a Menu Item
 
 
 ADDITIONAL INFORMATION

@@ -1,4 +1,5 @@
-Welcome to the Wine and Dine Restaurant Employee Page
+<h1>Welcome to the Wine and Dine Restaurant Employee Page</h1>
+<h2>Employee Guide</h2>
 
 ![alt tag](http://i.imgur.com/N5QxVRw.png)
 
@@ -6,46 +7,45 @@ Welcome to the Wine and Dine Restaurant Employee Page
 
 OFFERED FUNCTIONALITIES
 -----------------------
-	
+
 PARTY MANAGEMENT:
-  *Main party page that shows parties in queue and parties already paid 
-  *Ability to add parties with party name and number of guests
-  *Ability to view a single party, and edit or delete its information
-  *Ability to add, edit and delete orders on a party's specific page
-  *Ability to see if a party has paid and update paid status
-	
+<li>Main party page that shows parties in queue and parties already paid</li>
+<li>Ability to add parties with party name and number of guests</li> </li>
+<li>Ability to view a single party, and edit or delete its information</li> </li>
+<li>Ability to add, edit and delete orders on a party's specific page</li> </li>
+<li>Ability to see if a party has paid and update paid status</li> </li>
+
 MENU MANAGEMENT:
-  *Main menu page that displays all available food and drink items 
-  *Ability to add new food and drink items with name, cuisine type, and price
-  *Ability to view a single menu item, and edit or delete its information
+<li>Main menu page that displays all available food and drink items </li>
+<li>Ability to add new food and drink items with name, cuisine type, and priceAbility to view a single menu item, and edit or delete its information</li>
 
 NAVIGATION
 -----------------------
 
 I. HOMEPAGE
- 
-A.PARTIES
-Current and Checked Out Parties
-  *ADD New Party
-ADD Party Name and Number of Guests
-SELECT a Party
-  *UPDATE Paid Status
-  *EDIT a Party Name and Number of Guests
-  *DELETE Party
-  *VIEW Party Receipt
-  *PRINT Party Receipt Option
-DISPLAY all party's orders
-  *ADD a New Order
-  *SELECT Items for Order
-  *DELETE an order
 
-B.MENU
-Menu Items
-  *ADD New Menu Item
-ADD Menu Name, Cuisine Type, Price
-SELECT a Menu Item
-EDIT a Menu Item with Name, Cuisine Type and Price
-  *DELETE a Menu Item
+A. PARTIES
+<li>Current and Checked Out Parties</li>
+<b>ADD New Party</b>
+<li>ADD Party Name and Number of Guests</li>
+<b>SELECT a Party</b>
+<li>UPDATE Paid Status</li>
+<li>EDIT a Party Name and Number of Guests</li>
+<li>DELETE Party</li>
+<b>VIEW Party Receipt</b>
+<li>PRINT Party Receipt Option</li>
+<b>DISPLAY all party's orders</b>
+<li>ADD a New Order</li>
+<li>SELECT Items for Order</li>
+<li>DELETE an order</li>
+
+B. MENU
+<li>Menu Items</li>
+<b>ADD New Menu Item</b>
+<li>ADD Menu Name, Cuisine Type, Price</li>
+<b>SELECT a Menu Item</b>
+<li>EDIT a Menu Item with Name, Cuisine Type and Price</li>
+<li>DELETE a Menu Item</li>
 
 
 ADDITIONAL INFORMATION

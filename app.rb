@@ -93,12 +93,9 @@ end
 
 get '/parties/:id' do
 	@party = Party.find(params[:id])
-	# food = Food.find(params[:id])
 	@orders = Order.where(party_id: params[:id])
-	# @one_order = Order.where(food_id: params[:party_id])
 
 	@paid_status = @party.paid ? "Paid" : "Not Paid"
-	# @order_status = @one_order.free ? "Free" : "Not Free"
 
 	begin
 		@party.add_food_for_paid
@@ -136,13 +133,6 @@ post '/parties/:id/orders' do
 	order = Order.create(params[:order])
 	redirect "/parties/#{@party.id}"
 end
-
-# #update an order to mark as free
-# patch '/parties/:id/orders' do
-# 	party = Party.find(params[:id])
-# 	order = Order.where(party_id: params[:id])
-# 	order.update(params[:order])
-# end
 
 delete '/orders' do
 	party = Party.find(params[:party][:id])

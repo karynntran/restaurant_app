@@ -1,6 +1,6 @@
 Welcome to the Wine and Dine Restaurant Employee Page
 
-![alt tag](http://imgur.com/N5QxVRw)
+![alt tag](http://i.imgur.com/N5QxVRw.png)
 
 OFFERED FUNCTIONALITIES
 -----------------------
@@ -20,8 +20,8 @@ OFFERED FUNCTIONALITIES
 NAVIGATION
 -----------------------
 
-Homepage
-	-Parties
+HOMEPAGE
+	-PARTIES
 		-Current and Checked Out Parties
 			-ADD New Party
 				-ADD Party Name and Number of Guests
@@ -34,7 +34,8 @@ Homepage
 				-DISPLAY all party's orders
 					-ADD a New Order
 						-SELECT Items for Order
-	-Menu
+					-DELETE an order
+	-MENU
 		-Menu Items
 			-ADD New Menu Item
 				-ADD Menu Name, Cuisine Type, Price

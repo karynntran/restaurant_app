@@ -6,14 +6,14 @@ CREATE TABLE foods (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100),
   cuisine VARCHAR(100),
-  price INTEGER,
+  price INTEGER
 );
 
 CREATE TABLE parties (
   id SERIAL PRIMARY KEY,
   party_name VARCHAR(100),
-  guest_num INTEGER
-  paid BOOLEAN;
+  guest_num INTEGER,
+  paid BOOLEAN
 );
 
 CREATE TABLE orders (

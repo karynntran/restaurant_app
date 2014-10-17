@@ -96,6 +96,9 @@ get '/parties/:id' do
 	@orders = Order.where(party_id: params[:id])
 	
 	@paid_status = @party.paid ? "Paid" : "Not Paid"
+	# @orders.each do |order|
+	# 	@order_status = order.free ? "Free" : "Not Free"
+	# end
 
 	begin
 		@party.add_food_for_paid
@@ -116,6 +119,7 @@ patch '/parties/:id/checkout' do
 	party.update(params[:paid])
 end
 
+
 ### ORDER FROM PARTIES###
 get '/parties/:id/orders' do
 	erb :'orders/index'
@@ -133,11 +137,12 @@ post '/parties/:id/orders' do
 	redirect "/parties/#{@party.id}"
 end
 
-# patch '/orders/:id' do
-# 	# @order = Order.find(params[:id])
-# 	# @order.update(params[:order])
-# 	redirect "/parties/#{party.id}"
-### MARK ITEM AS FREE
+##update an order to mark as free
+# patch '/parties/:id/orders' do
+# 	party = Party.find(params[:id])
+# 	order = Order.where(party_id: params[:id])
+# 	order.update(free: true)
+# 	order.update(food_price: 0)
 # end
 
 delete '/orders' do

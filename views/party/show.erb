@@ -54,6 +54,15 @@
 					<input class = "delete" type ="submit" value="Delete order"/>
 				</form>
 			</td>
+			<td>
+				<form action = '/orders' name="method" method="post">
+					<input type ="hidden" name="_method" value="patch"/>
+					<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
+					<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>
+					<input type ="hidden" name="order[free]" value="true"/>
+					<input type ="submit" value="Mark Free"/>
+				</form>
+			</td>
 
 		</tr>
 	<% end %>

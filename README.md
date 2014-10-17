@@ -2,6 +2,8 @@ Welcome to the Wine and Dine Restaurant Employee Page
 
 ![alt tag](http://imgur.com/N5QxVRw)
 
+
+
 OFFERED FUNCTIONALITIES
 -----------------------
 	
@@ -21,26 +23,26 @@ NAVIGATION
 -----------------------
 
 Homepage
-	*Parties
-		**Current and Checked Out Parties
-			***ADD New Party
-				-ADD Party Name and Number of Guests
-			-SELECT a Party
-				-UPDATE Paid Status
-				-EDIT a Party Name and Number of Guests
-				-DELETE Party
-				-VIEW Party Receipt
-					-PRINT Party Receipt Option
-				-DISPLAY all party's orders
-					-ADD a New Order
-						-SELECT Items for Order
-	-Menu
-		-Menu Items
-			-ADD New Menu Item
-				-ADD Menu Name, Cuisine Type, Price
-			-SELECT a Menu Item
-				-EDIT a Menu Item with Name, Cuisine Type and Price
-				-DELETE a Menu Item
+	Parties
+		Current and Checked Out Parties
+			ADD New Party
+				ADD Party Name and Number of Guests
+			SELECT a Party
+				UPDATE Paid Status
+				EDIT a Party Name and Number of Guests
+				DELETE Party
+				VIEW Party Receipt
+					PRINT Party Receipt Option
+				DISPLAY all party's orders
+					ADD a New Order
+						SELECT Items for Order
+	Menu
+		Menu Items
+			ADD New Menu Item
+				ADD Menu Name, Cuisine Type, Price
+			SELECT a Menu Item
+				EDIT a Menu Item with Name, Cuisine Type and Price
+				DELETE a Menu Item
 
 
 ADDITIONAL INFORMATION

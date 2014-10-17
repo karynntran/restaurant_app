@@ -4,13 +4,21 @@
 	<a class ="nav" href = "/parties/new">Add new party?</a>
 
 	<h2>CURRENT PARTIES</h2>
-	<ul>
+	<table>
 	<% @current_parties.each do |party| %>
-		<li>
-		<a href="/parties/<%=party.id%>"><%=party.party_name%></a>: Party of <%=party.guest_num%>
-		</li>
+		<tr>
+			<td>
+				<a href="/parties/<%=party.id%>"><%=party.party_name%></a> 
+			</td>
+			<td>
+				Party of <%=party.guest_num%>
+			</td>
+			<td>
+				Seated at <%=party.created_at%>
+			</td>
+		</tr>
 	<% end %>
-	</ul>
+	</table>
 
 	<h2>CHECKED OUT PARTIES (ALREADY PAID)</h2>
 	<ul>

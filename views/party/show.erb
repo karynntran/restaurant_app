@@ -26,7 +26,7 @@
 		<input type ="submit" value="Submit"/>
 	</form>
 
-
+<p>===========================</p>
 
 	<h2>ALL ORDERS</h2>
 	<% if @error %>
@@ -54,7 +54,7 @@
 					<input class = "delete" type ="submit" value="Delete order"/>
 				</form>
 			</td>
-			<td>
+<!-- 			<td>
 				<form action = '/orders' name="method" method="post">
 					<input type ="hidden" name="_method" value="patch"/>
 					<input type ="hidden" name="order[id]" value="<%=order.id%>"/>
@@ -62,7 +62,7 @@
 					<input type ="hidden" name="order[free]" value="true"/>
 					<input type ="submit" value="Mark Free"/>
 				</form>
-			</td>
+			</td> -->
 
 		</tr>
 	<% end %>

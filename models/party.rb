@@ -31,5 +31,9 @@ class Party < ActiveRecord::Base
 		(self.subtotal.to_i * 0.20).to_i
 	end
 
+	def created_at
+		time = Time.new.strftime("%I:%M %p")
+	end
+
 
 end

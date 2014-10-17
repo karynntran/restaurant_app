@@ -15,7 +15,7 @@ ActiveRecord::Base.establish_connection({
 ### LANDING PAGE ###
 
 get '/' do
-	erb :index
+	erb :home
 end
 
 ### FOOD CRUD ###

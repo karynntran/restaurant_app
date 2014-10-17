@@ -19,6 +19,7 @@ CREATE TABLE parties (
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY,
   party_id INTEGER,
-  food_id INTEGER
+  food_id INTEGER,
+  free BOOLEAN
 );
 

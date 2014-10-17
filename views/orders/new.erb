@@ -5,7 +5,7 @@
 		<%@foods.each do |food|%>
 			<input type="radio" name="order[food_id]" value="<%=food.id%>"/><%=food.name%><br>
 		<%end%>
-		
+		<input type="hidden" name="order[free]" value="false"/>
 	 	<input type="hidden" name="order[party_id]" value="<%=@party.id%>"/>
 		<input type="submit" value="Submit Order">
 	</form>

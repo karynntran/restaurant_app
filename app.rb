@@ -66,8 +66,8 @@ end
 
 get '/parties' do
 	@parties = Party.all
-	@currentparties = Party.where(:paid == false)
-	@paidparties = Party.where(:paid == true)
+	@current_parties = Party.where(paid: false)
+	@paid_parties = Party.where(paid: true)
 	erb :'party/index'
 end
 
@@ -95,7 +95,8 @@ get '/parties/:id' do
 	@party = Party.find(params[:id])
 	@orders = Order.where(party_id: params[:id])
 	
-	# @party.paid ? "Paid" : "Not Paid"
+	@paid_status = @party.paid ? "Paid" : "Not Paid"
+
 	begin
 		@party.add_food_for_paid
 	rescue Party::AddNewFoodforPaid => e

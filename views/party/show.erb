@@ -3,7 +3,7 @@
 
 	<p>Number of Guests: <%=@party.guest_num%></p>
 
-	<p>Paid: <%=@party.paid%> </p>
+	<p>Paid: <%=@paid_status%> </p>
 	<form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="patch"/>
 		Paid<input type ="radio" name="party[paid]" value="true"/>

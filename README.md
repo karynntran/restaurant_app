@@ -2,6 +2,8 @@ Welcome to the Wine and Dine Restaurant Employee Page
 
 ![alt tag](http://i.imgur.com/N5QxVRw.png)
 
+
+
 OFFERED FUNCTIONALITIES
 -----------------------
 	

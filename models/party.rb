@@ -30,6 +30,4 @@ class Party < ActiveRecord::Base
 	def three_gratuity
 		(self.subtotal.to_i * 0.20).to_i
 	end
-
-
 end

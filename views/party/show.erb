@@ -10,14 +10,13 @@
 				<form action = '/parties/<%=@party.id%>' name="method" method="post">
 				<input type ="hidden" name="_method" value="delete"/>
 				<input class = "delete" type ="submit" value="Delete party"/>
+				</form>
 			</td>
 			<td>
 				<a class ="nav" href="/parties">See all parties?</a>
 			</td>
-		</form>
 		<tr>
 	</table>
-	
 
 	<p>NUMBER OF GUESTS: <%=@party.guest_num%></p>
 
@@ -45,7 +44,7 @@
 			<td>ITEM</td>
 			<td>PRICE</td>
 		</tr>
-	<% @orders.each do |order| %>
+		<% @orders.each do |order| %>
 		<tr>
 			<td><%=order.food_name%></td>
 			<td><%=order.food_price%></td>
@@ -58,7 +57,7 @@
 				</form>
 			</td>
 		</tr>
-	<% end %>
+		<% end %>
 	</table>
 
 	<%=@order_status%>

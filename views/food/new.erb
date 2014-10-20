@@ -5,12 +5,14 @@
 
 	<% if @errors %>
 	<div class="errors">
-	<p>You have <%= @errors.count %> <%= @errors.count == 1 ? "ERROR" : "ERRORS" %>.</p>
-	  <ul>
+		<p>You have <%= @errors.count %> <%= @errors.count == 1 ? "ERROR" : "ERRORS" %>.</p>
+	  	<ul>
 	    <% @errors.each do |error|  %>
-	      <li><%= error %></li>
+	     	<li>
+	      		<%= error %>
+	      	</li>
 	    <% end %>
-	  </ul>
+	  	</ul>
 	</div>
 	<% end %>
 
@@ -19,7 +21,5 @@
 		<p>Cuisine:</p><input type ="text" name="food[cuisine]" placeholder="Cuisine type"/>
 		<p>Price($):</p><input type ="text" name="food[price]" placeholder="Price of food"/>
 		<input type ="submit" value="Add Food Item">
-	</form>
-
-	
+	</form>	
 </div>

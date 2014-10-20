@@ -5,30 +5,30 @@
 
 	<h2>CURRENT PARTIES</h2>
 	<table>
-	<% @current_parties.each do |party| %>
-		<tr>
-			<td>
-				<a href="/parties/<%=party.id%>"><%=party.party_name%></a> 
-			</td>
-			<td>
-				Party of <%=party.guest_num%>
-			</td>
-		</tr>
-	<% end %>
+		<% @current_parties.each do |party| %>
+			<tr>
+				<td>
+					<a href="/parties/<%=party.id%>"><%=party.party_name%></a> 
+				</td>
+				<td>
+					Party of <%=party.guest_num%>
+				</td>
+			</tr>
+		<% end %>
 	</table>
 
 	<h2>CHECKED OUT PARTIES (ALREADY PAID)</h2>
 	<table>
-	<% @paid_parties.each do |party| %>
-		<tr>
-			<td>
-				<a href="/parties/<%=party.id%>"><%=party.party_name%></a> 
-			</td>
-			<td>
-				Party of <%=party.guest_num%>
-			</td>
-		</tr>
-	<% end %>
+		<% @paid_parties.each do |party| %>
+			<tr>
+				<td>
+					<a href="/parties/<%=party.id%>"><%=party.party_name%></a> 
+				</td>
+				<td>
+					Party of <%=party.guest_num%>
+				</td>
+			</tr>
+		<% end %>
 	</table>
 </div>	
 

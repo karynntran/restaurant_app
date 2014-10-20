@@ -1,21 +1,23 @@
-<div class = "wrapper">	
+<div class = "wrapper">
 	<h1>Receipt for <%=@party.party_name%> Party</h1>
+
+	<a class ="nav" href = "/parties/<%=party.id%>">Back to <%=party.name%> party?</a>
 
 	<form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>
 	</form>
 
 	<table>
-	<% @orders.each do |order| %>
-		<tr>
-			<td>
-			<%= order.food.name %>
-			</td>
-			<td>
-			<%= order.food.price %>
-			</td>
-		<tr>
-	<% end %>
+		<% @orders.each do |order| %>
+			<tr>
+				<td>
+				<%= order.food.name %>
+				</td>
+				<td>
+				<%= order.food.price %>
+				</td>
+			<tr>
+		<% end %>
 	</table>
 
 	<p>===========================</p>
@@ -31,7 +33,6 @@
 	15%: $<%= @party.one_gratuity%><br>
 	18%: $<%= @party.two_gratuity%><br>
 	20%: $<%= @party.three_gratuity%><br>
-
 
 	<p>===========================</p>
 

@@ -13,5 +13,4 @@ class Order < ActiveRecord::Base
 	def food_price
 	    "$" + (self.food.price).to_s
 	end
-
 end

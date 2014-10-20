@@ -7,6 +7,8 @@ html {
   background-size: cover;
 }
 
+/*fonts styling*/
+
 head {
 	background-color: darkgray;
 }
@@ -131,7 +133,7 @@ p {
 }
 
 
-/*errors*/
+/*Errors*/
 
 .errors {
 	font-size: 15px;
@@ -140,7 +142,7 @@ p {
 	color: orangered;
 }
 
-/*buttons*/
+/*Buttons*/
 
 .edit_delete {
 	margin: 0;

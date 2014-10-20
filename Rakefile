@@ -41,4 +41,8 @@ namespace :db do
     Party.create({party_name: 'Targaryen', guest_num: 10, paid: 'false'})
     Party.create({party_name: 'Tran', guest_num: 6, paid: 'false'})
    end
+
+   desc "delete all generated receipts"
+  	task :delete_receipts do
+  end
 end 

@@ -1,7 +1,7 @@
 <div class = "wrapper">
 	<h1>Receipt for <%=@party.party_name%> Party</h1>
 
-	<a class ="nav" href = "/parties/<%=party.id%>">Back to <%=party.name%> party?</a>
+	<a class ="nav" href = "/parties/<%=@party.id%>">Back to <%=@party.party_name%> party?</a>
 
 	<form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="party[id]" value="<%=@party.id%>"/>

@@ -1,1 +1,1 @@
-["Escargot", 16]["Lumpia ", 8]["Kimchi Fried Rice", 11]
+["Spicy Tuna Rolls", 13]["Lumpia", 6]["Lumpia", 6]

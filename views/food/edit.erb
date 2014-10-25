@@ -1,13 +1,11 @@
+
 <div class = "wrapper">
 	<h1>Edit <%=@food.name%></h1>
 
-	<a class ="nav" href = "/foods">See all food items?</a>
 
-	<form action = '/foods/<%=@food.id%>' name="method" method="post">
-		<input type ="hidden" name="_method" value="patch"/>
-		<p>Food Name:</p><input type ="text" name="food[name]" value="<%=@food.name%>"/>
-		<p>Cuisine:</p><input type ="text" name="food[cuisine]" value="<%=@food.cuisine%>"/>
-		<p>Price($):</p><input type ="text" name="food[price]" value="<%=@food.price%>"/>
-		<input type ="submit" value="Update Food Item"/>
-	</form>
-</div>
+<%= form_open(@food, method: 'patch') %>
+	<p>Food Name:</p><%=input_tag(type: 'text', resource: 'food', name: 'name', value: @food.name) %>
+	<p>Cuisine:</p><%=input_tag(type: 'text', resource: 'food', name: 'cuisine', value: @food.cuisine) %>
+	<p>Price($):</p><%=input_tag(type: 'text', resource: 'food', name: 'price', value: @food.price) %>
+	<%=input_tag(type: 'submit', value: "Update Item") %>
+<%=form_close %>

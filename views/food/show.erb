@@ -1,7 +1,7 @@
 <div class = "wrapper">
 	<h1><%=@food.name%></h1>
 
-	<a class ="nav" href = "/foods">See all menu items</a>
+	<%= link_to_all('foods') %>
 
 	<p>CUISINE: <%=@food.cuisine%></p>
 	<p>PRICE: <%=@food.price%></p>

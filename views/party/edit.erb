@@ -1,7 +1,7 @@
 <div class = "wrapper">
 	<h1>Edit Party Information</h1>
 
-	<a class ="nav" href = "/parties">See all parties?</a>
+	<%= link_to_all('parties') %>
 
 	<form action = '/parties/<%=@party.id%>' name="method" method="post">
 		<input type ="hidden" name="_method" value="patch"/>

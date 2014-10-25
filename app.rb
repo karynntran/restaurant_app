@@ -3,19 +3,37 @@ Bundler.require
 require 'active_support'
 require 'pry'
 
+#### MODELS ###
 require_relative 'models/food.rb'
 require_relative 'models/party.rb'
 require_relative 'models/order.rb'
+require_relative 'models/user.rb'
 
-ActiveRecord::Base.establish_connection({
-	adapter: 'postgresql',
-	database: 'restaurant_db'
-})
+#### HELPERS ###
+
+require_relative 'helpers/link_helper'
+require_relative 'helpers/form_helper'
+helpers ActiveSupport::Inflector
+
+#### CONNECTION ###
+
+require_relative 'connection'
+
+get '/console' do
+	binding.pry
+end
 
 ### LANDING PAGE ###
 
 get '/' do
 	erb :home
+end
+
+### SIGN IN ###
+
+get '/users/new' do
+	@users = User.all
+	erb :'users/new'
 end
 
 ### FOOD CRUD ###

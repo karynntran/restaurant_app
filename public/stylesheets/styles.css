@@ -111,14 +111,15 @@ p {
 
 /*Navigation*/
 
-.navigation {
+.navbar {
 	background-color: black;
 	opacity: 0.8;
 	margin: 0 -10px;
 	height: 25px;
+	float: right;
 }
 
-.navigation ul {
+.navigation td {
 	text-align: right;
 }
 

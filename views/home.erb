@@ -1,18 +1,36 @@
-<div class = "homepageimage"></div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1280px">
+	<title>Wine and Dine</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite|Voltaire' rel='stylesheet' type='text/css'>
+</head>
 
-<div class = "landing">
-	<div class = "box black">
-		<h3 class = "welcome">Wine & Dine Restaurant Employee Page</h1>
+
+<body>
+	
+	<div class = "homepageimage"></div> 
+
+	<div class = "landing">
+		<div class = "box black">
+			<h3 class = "welcome">Wine & Dine Restaurant Employee Page</h1>
+		</div>
+
+		<% if current_user %>
+    		<%= erb :'_homepage_nav_for_users'%>
+  		<% else %>
+    		<%= erb :'_homepage_nav_for_nonusers'%>
+  		<% end %>
+
+
 	</div>
 
-	<div class = "box white">
-		<br>
-		<a id = "homelink" href = "/parties">PARTIES</a><br>
-		Click to see current parties<br>
-		<br><a id = "homelink" href = "/foods">MENU</a><br>
-		Click to see menu items<br>
-	</div>
-</div>
+</body>
+</html>
+
+
 
 
 

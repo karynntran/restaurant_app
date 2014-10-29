@@ -2,7 +2,11 @@ require 'bundler'
 Bundler.require
 
 require 'sinatra/activerecord/rake'
-require_relative 'connection.rb'
+
+ActiveRecord::Base.establish_connection({
+  adapter: 'postgresql',
+  database: 'restaurant_db'
+})
 
 namespace :db do
   desc "Create restaurant_db database"
@@ -45,4 +49,4 @@ namespace :db do
    desc "delete all generated receipts"
   	task :delete_receipts do
   end
-end 
+end

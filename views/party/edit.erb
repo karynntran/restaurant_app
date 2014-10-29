@@ -1,12 +1,11 @@
-<div class = "wrapper">
-	<h1>Edit Party Information</h1>
 
-	<%= link_to_all('parties') %>
+<h1>Edit Party Information</h1>
 
-	<form action = '/parties/<%=@party.id%>' name="method" method="post">
-		<input type ="hidden" name="_method" value="patch"/>
-		<p>Party Name:</p><input type ="text" name="party[party_name]" value="<%=@party.party_name%>"/>
-		<p>Number of Guests:</p><input type ="text" name="party[guest_num]" value="<%=@party.guest_num%>"/>
-		<input type ="submit" value="Update Party Info"/>
-	</form>	
-</div>
+<%= link_to_all('parties') %>
+
+<form action = '/parties/<%=@party.id%>' name="method" method="post">
+	<input type ="hidden" name="_method" value="patch"/>
+	<p>Party Name:</p><input type ="text" name="party[party_name]" value="<%=@party.party_name%>"/>
+	<p>Number of Guests:</p><input type ="text" name="party[guest_num]" value="<%=@party.guest_num%>"/>
+	<input type ="submit" value="Update Party Info"/>
+</form>	

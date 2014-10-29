@@ -1,26 +1,25 @@
-<div class = "wrapper">
-	<h1>Menu Items</h1>
 
-	<a class ="nav" href = "/foods/new">Add new menu item</a>
+<h1>Menu Items</h1>
 
-	<table>
-		<tr>
-			<td>ITEM</td>
-			<td>CUISINE</td>
-			<td>PRICE</td>
-		</tr>
+<a class ="nav" href = "/foods/new">Add new menu item</a>
+
+<table>
+	<tr>
+		<td>ITEM</td>
+		<td>CUISINE</td>
+		<td>PRICE</td>
+	</tr>
 	<% @foods.each do |food| %>
-		<tr>
-			<td>
-				<a href="/foods/<%=food.id%>"><%=food.name%></a>
-			</td>
-			<td>
-				<%=food.cuisine %></a>
-			</td>
-			<td>
-				<%=food.price%></a>
-			</td>
-		</tr>
+	<tr>
+		<td>
+			<a href="/foods/<%=food.id%>"><%=food.name%></a>
+		</td>
+		<td>
+			<%=food.cuisine %></a>
+		</td>
+		<td>
+			<%=food.price%></a>
+		</td>
+	</tr>
 	<% end %>
-	</table>
-</div>
+</table>

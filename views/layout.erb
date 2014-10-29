@@ -9,15 +9,16 @@
 	</head>
 
 	<header class = "navigation">
-		<ul class = "navbar">
-			<li class = "navbullets"><a id = "navlinks" href="/">Home</a></li>
-			<li class = "navbullets"><a id ="navlinks" href="/parties">Parties</a></li>
-			<li class = "navbullets"><a id = "navlinks" href="/foods">Menu</a></li>
-			<li class = "navbullets"><a id = "navlinks" href="/users/new">Sign Up</a></li>
-		</ul>
+		<% if @current_user %>
+    		<%= erb :'_top_nav_for_users'%>
+  		<% else %>
+    		<%= erb :'_top_nav_for_nonusers'%>
+  		<% end %>
 	</header>
 
 	<body>
-		<%= yield %>
+		<div class = "wrapper">
+			<%= yield %>
+		</div>
 	</body>
 </html>

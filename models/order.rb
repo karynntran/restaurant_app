@@ -3,8 +3,8 @@ require_relative 'party'
 require 'pry'
 
 class Order < ActiveRecord::Base
-	belongs_to(:party)
-  	belongs_to(:food)
+	belongs_to :party
+  belongs_to :food
 
 	def food_name
 	    self.food.name

@@ -9,15 +9,15 @@ OFFERED FUNCTIONALITIES
 -----------------------
 
 PARTY MANAGEMENT:
-<li>Main party page that shows parties in queue and parties already paid</li>
-<li>Ability to add parties with party name and number of guests</li> </li>
-<li>Ability to view a single party, and edit or delete its information</li> </li>
-<li>Ability to add, edit and delete orders on a party's specific page</li> </li>
-<li>Ability to see if a party has paid and update paid status</li> </li>
+- Main party page that shows parties in queue and parties already paid
+- Ability to add parties with party name and number of guests
+- Ability to view a single party, and edit or delete its information
+- Ability to add, edit and delete orders on a party's specific page
+- Ability to see if a party has paid and update paid status
 
 MENU MANAGEMENT:
-<li>Main menu page that displays all available food and drink items </li>
-<li>Ability to add new food and drink items with name, cuisine type, and priceAbility to view a single menu item, and edit or delete its information</li>
+- Main menu page that displays all available food and drink items
+- Ability to add new food and drink items with name, cuisine type, and priceAbility to view a single menu item, and edit or delete its information
 
 NAVIGATION
 -----------------------
